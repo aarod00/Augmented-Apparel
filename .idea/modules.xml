@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AugUnityApp.iml" filepath="$PROJECT_DIR$/.idea/modules/AugUnityApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/launcher/AugUnityApp.launcher.iml" filepath="$PROJECT_DIR$/.idea/modules/launcher/AugUnityApp.launcher.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unityLibrary/AugUnityApp.unityLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/unityLibrary/AugUnityApp.unityLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Augmented_Apparel.iml" filepath="$PROJECT_DIR$/.idea/modules/Augmented_Apparel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/launcher/Augmented_Apparel.launcher.iml" filepath="$PROJECT_DIR$/.idea/modules/launcher/Augmented_Apparel.launcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unityLibrary/Augmented_Apparel.unityLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/unityLibrary/Augmented_Apparel.unityLibrary.iml" />
     </modules>
   </component>
 </project>
