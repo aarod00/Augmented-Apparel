@@ -108,7 +108,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Veteran\AndroidStudioProjects\backbtn2.png" />
+                                                <entry key="imagePath" value="C:\Users\Veteran\AndroidStudioProjects\cameraaction.png" />
                                                 <entry key="scalingPercent" value="90" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
@@ -142,7 +142,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_backbtn2" />
+                                      <entry key="outputName" value="ic_cameraction" />
                                     </map>
                                   </option>
                                 </PersistentState>

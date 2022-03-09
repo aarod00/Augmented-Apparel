@@ -1,23 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Controls the layout of the unityactivityplayer-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clAugCamera"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".UnityPlayerActivity">
 
     <Button
-        android:id="@+id/btnBack"
+        android:id="@+id/btnBackLSU"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+
+        android:adjustViewBounds="true"
+
+        android:background="@mipmap/ic_backbtn2"
+        android:contentDescription="Return"
+        android:cropToPadding="true"
         android:onClick="finish()"
-        android:text="Back"
+        android:scaleType="fitCenter"
+        android:shape="ring"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="OnClick" />
 
+    <Button
+        android:id="@+id/btnCameraCapture"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="75dp"
+        android:background="@mipmap/ic_cameraction_round"
+        android:contentDescription="Capture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivScreenshot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
