@@ -50,6 +50,7 @@
         <activity
             android:name=".UnityPlayerActivity"
             android:exported="true"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
             android:hardwareAccelerated="false"
             android:parentActivityName=".MainMenu"
             android:screenOrientation="fullSensor"

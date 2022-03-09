@@ -23,6 +23,7 @@ public class UnityPlayerActivity extends Activity implements IUnityPlayerLifecyc
 {
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
     private String cmdLine;
+    private Button btnBack;
 
     // Override this in your custom UnityPlayerActivity to tweak the command line arguments passed to the Unity Android Player
     // The command line arguments are passed as a string, separated by spaces
@@ -41,15 +42,21 @@ public class UnityPlayerActivity extends Activity implements IUnityPlayerLifecyc
     {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        cmdLine = updateUnityCommandLineArguments(getIntent().getStringExtra("unity"));
-        getIntent().putExtra("unity", cmdLine);
+        // cmdLine = updateUnityCommandLineArguments(getIntent().getStringExtra("unity"));
+        // getIntent().putExtra("unity", cmdLine);
         mUnityPlayer = new UnityPlayer(this, this);
         setContentView(R.layout.activity_unityplayeractivity);
 
         // Sets the Unity Augmented Player to be viewed.
         ConstraintLayout layout = findViewById(R.id.clAugCamera);
-        layout.addView(mUnityPlayer.getView());
-
+        layout.addView(mUnityPlayer);
+/*
+        btnBack = (Button) findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Do something in response to button click
+            }
+        });*/
     }
 
     // When Unity player unloaded move task to background
