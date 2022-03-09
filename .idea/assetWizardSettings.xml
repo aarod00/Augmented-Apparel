@@ -25,7 +25,7 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="imagePath" value="C:\Users\Veteran\AppData\Local\Temp\ic_android_black_24dp.xml" />
-                                                <entry key="opacityPercent" value="80" />
+                                                <entry key="opacityPercent" value="60" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -40,6 +40,7 @@
                                                 <entry key="color" value="000000" />
                                                 <entry key="imagePath" value="C:\Users\Veteran\AndroidStudioProjects\backbutton.png" />
                                                 <entry key="opacityPercent" value="60" />
+                                                <entry key="paddingPercent" value="5" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -78,6 +79,7 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="imageAsset" value="C:\Users\Veteran\AndroidStudioProjects\backbutton.png" />
+                                      <entry key="outputName" value="ic_action_back" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -106,7 +108,9 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Veteran\AndroidStudioProjects\backbutton.png" />
+                                                <entry key="imagePath" value="C:\Users\Veteran\AndroidStudioProjects\backbtn2.png" />
+                                                <entry key="scalingPercent" value="90" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -138,7 +142,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_backbutton" />
+                                      <entry key="outputName" value="ic_backbtn2" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -205,6 +209,18 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\Veteran\AndroidStudioProjects\backbutton.png" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                       <entry key="text">
                                         <value>
                                           <PersistentState>
@@ -227,6 +243,12 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="C:\Users\Veteran\AndroidStudioProjects\backbutton.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
