@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Rad_Symbol" size="0.152400 0.152400" />
+    <ImageTarget name="NASA_Logo" size="0.279400 0.222309" />
+  </Tracking>
+</QCARConfig>
