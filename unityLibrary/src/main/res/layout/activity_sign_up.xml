@@ -68,6 +68,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="Sign Up"
+        android:onClick="buttonClick"
         app:layout_constraintEnd_toStartOf="@+id/btnCancelSU"
         app:layout_constraintStart_toStartOf="@+id/etPasswordSU"
         app:layout_constraintTop_toBottomOf="@+id/etPasswordSU" />
@@ -79,6 +80,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:text="Cancel"
+        android:onClick="buttonClick"
         app:layout_constraintEnd_toEndOf="@+id/etPasswordSU"
         app:layout_constraintStart_toEndOf="@+id/btnSignUpSU"
         app:layout_constraintTop_toBottomOf="@+id/etPasswordSU" />

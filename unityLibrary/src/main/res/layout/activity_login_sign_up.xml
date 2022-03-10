@@ -27,6 +27,7 @@
         android:layout_marginTop="75dp"
         android:layout_marginEnd="5dp"
         android:text="Login"
+        android:onClick="buttonClick"
         app:layout_constraintEnd_toStartOf="@+id/btnSignUp"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/etPassword" />
@@ -38,6 +39,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="75dp"
         android:text="SignUp"
+        android:onClick="buttonClick"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toEndOf="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/etPassword" />
@@ -73,6 +75,7 @@
         android:layout_marginTop="15dp"
         android:background="@color/design_default_color_background"
         android:scaleType="fitCenter"
+        android:onClick="buttonClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_revert" />

@@ -9,24 +9,30 @@
     android:background="#ffffff"
     tools:context=".UnityPlayerActivity">
 
+    <ImageView
+        android:id="@+id/ivScreenshot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/btnBackLSU"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
-
         android:adjustViewBounds="true"
-
         android:background="@mipmap/ic_backbtn2"
-        android:contentDescription="Return"
         android:cropToPadding="true"
-        android:onClick="finish()"
+        android:onClick="buttonClick"
         android:scaleType="fitCenter"
         android:shape="ring"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="OnClick" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnCameraCapture"
@@ -35,15 +41,7 @@
         android:layout_marginBottom="75dp"
         android:background="@mipmap/ic_cameraction_round"
         android:contentDescription="Capture"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/ivScreenshot"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitCenter"
+        android:onClick="buttonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

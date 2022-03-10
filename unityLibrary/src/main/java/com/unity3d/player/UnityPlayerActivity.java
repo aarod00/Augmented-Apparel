@@ -2,15 +2,19 @@
 
 package com.unity3d.player;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,21 +23,29 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.test.runner.screenshot.Screenshot;
+
+import com.nmd.screenshot.AugScreenCapture;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Date;
 
 
-public class UnityPlayerActivity extends Activity implements IUnityPlayerLifecycleEvents
-{
+public class UnityPlayerActivity extends Activity implements IUnityPlayerLifecycleEvents {
+    private static final String TAG = "1";
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
     //private String cmdLine;
     //private Button btnBack;
 
     // Camera Related
-    private Button btnCameraCapture;
-    private ImageView ivScreenshot;
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] permissionStorage = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    Button btnCameraCapture;
+    Button btnBackLSU;
     
 
     // Override this in your custom UnityPlayerActivity to tweak the command line arguments passed to the Unity Android Player
@@ -61,7 +73,14 @@ public class UnityPlayerActivity extends Activity implements IUnityPlayerLifecyc
         // Sets the Unity Augmented Player to be viewed.
         ConstraintLayout layout = findViewById(R.id.clAugCamera);
         layout.addView(mUnityPlayer);
+
+        // Initialize buttons with respective ids.
+        btnCameraCapture = findViewById(R.id.btnCameraCapture);
+        btnCameraCapture.setOnClickListener(this::buttonClick);
+        btnBackLSU = findViewById(R.id.btnBackLSU);
+        btnBackLSU.setOnClickListener(this::buttonClick);
     }
+
 
     // When Unity player unloaded move task to background
     @Override public void onUnityPlayerUnloaded() {
@@ -81,13 +100,14 @@ public class UnityPlayerActivity extends Activity implements IUnityPlayerLifecyc
         setIntent(intent);
         mUnityPlayer.newIntent(intent);
     }
-
+/*
+    // Closes the entire app is available.
     // Quit Unity
     @Override protected void onDestroy ()
     {
         mUnityPlayer.destroy();
         super.onDestroy();
-    }
+    }*/
 
     // If the activity is in multi window mode or resizing the activity is allowed we will use
     // onStart/onStop (the visibility callbacks) to determine when to pause/resume.
@@ -182,4 +202,25 @@ public class UnityPlayerActivity extends Activity implements IUnityPlayerLifecyc
     /*API12*/ public boolean onGenericMotionEvent(MotionEvent event)  { return mUnityPlayer.injectEvent(event); }
 
 
+    public void buttonClick(View view) {
+        int viewID = view.getId();
+        int captureID = btnCameraCapture.getId();
+        int backID = btnBackLSU.getId();
+
+        if (viewID == captureID) {
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            };
+        } else if (viewID == backID){
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            };
+        }
+    }
 }

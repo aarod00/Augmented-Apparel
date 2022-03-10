@@ -3,6 +3,7 @@ package com.unity3d.player
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 
 class MainMenu : AppCompatActivity() {
@@ -13,20 +14,22 @@ class MainMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
 
-        // Button that starts the camera view for augmentations.
+        // Set button to respective ids.
         btnScan = findViewById(R.id.btnScan)
-        btnScan.setOnClickListener {
-            //setContentView(R.layout.activity_unityplayeractivity)
-            var intent = Intent(this, UnityPlayerActivity::class.java)
-            startActivity(intent)
-        }
-
-        // Button that takes user to login / Sign up screen.
         btnLoginSignUp = findViewById(R.id.btnLoginSignUp)
-        btnLoginSignUp.setOnClickListener {
-            //setContentView(R.layout.activity_unityplayeractivity)
-            var intent = Intent(this, LoginSignUp::class.java)
-            startActivity(intent)
+
+    }
+
+    // Button listeners for each button.
+    fun buttonClick(view: View) {
+        when(view) {
+            // Open augmentation camera.
+            btnScan -> {
+                startActivity(Intent(this, UnityPlayerActivity::class.java))}
+            // Open login/sign up activity.
+            btnLoginSignUp -> {
+                startActivity(Intent(this, LoginSignUp::class.java))
+            }
         }
     }
 }
